@@ -65,7 +65,10 @@ fun Clock() {
         }
 
     }
-    Column(horizontalAlignment = Alignment.CenterHorizontally, modifier = Modifier.fillMaxWidth()) {
+    Column(
+        modifier = Modifier.fillMaxWidth(),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
         DigitalClockComponent(hour = hour, minute = minute, amOrPm = amOrPm)
         Spacer(modifier = Modifier.height(36.dp))
         DrawnClock(hour = hour.toInt(), minute = minute.toInt(), second = second.toInt())
