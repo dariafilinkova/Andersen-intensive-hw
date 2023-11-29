@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Andersen-intensive</string>
+    <string name="flags">Flags</string>
+    <string name="load_image_with_library">Load image with library</string>
+    <string name="clock">Clock</string>
+    <string name="load_image_without_library">Load image without library</string>
 </resources>
