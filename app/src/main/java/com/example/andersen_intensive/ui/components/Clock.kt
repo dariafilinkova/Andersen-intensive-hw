@@ -30,6 +30,10 @@ import com.example.andersen_intensive.ui.theme.ClockHourHandColor
 import com.example.andersen_intensive.ui.theme.ClockInnerCircleBoxShadow
 import com.example.andersen_intensive.ui.theme.ClockMinuteHandColor
 import com.example.andersen_intensive.ui.theme.ClockOuterCircleBoxColor
+import com.example.andersen_intensive.ui.theme.ClockOuterCircleBoxShadow1
+import com.example.andersen_intensive.ui.theme.ClockOuterCircleBoxShadow2
+import com.example.andersen_intensive.ui.theme.ClockOuterCircleBoxShadow3
+import com.example.andersen_intensive.ui.theme.ClockOuterCircleBoxShadow4
 import com.example.andersen_intensive.ui.theme.ClockSecondHandColor
 import kotlinx.coroutines.delay
 import java.lang.Float.min
@@ -63,7 +67,7 @@ fun Clock() {
     }
     Column(horizontalAlignment = Alignment.CenterHorizontally, modifier = Modifier.fillMaxWidth()) {
         DigitalClockComponent(hour = hour, minute = minute, amOrPm = amOrPm)
-        Spacer(modifier = Modifier.height(12.dp))
+        Spacer(modifier = Modifier.height(36.dp))
         DrawnClock(hour = hour.toInt(), minute = minute.toInt(), second = second.toInt())
     }
 }
@@ -78,6 +82,30 @@ fun DrawnClock(
         modifier = Modifier
             .fillMaxWidth(fraction = 0.6f)
             .aspectRatio(1f)
+            .shadowCircular(
+                offsetX = (-38).dp,
+                offsetY = 0.dp,
+                blurRadius = 54.dp,
+                color = ClockOuterCircleBoxShadow1
+            )
+            .shadowCircular(
+                offsetX = (30).dp,
+                offsetY = 0.dp,
+                blurRadius = 54.dp,
+                color = ClockOuterCircleBoxShadow2
+            )
+            .shadowCircular(
+                offsetX = (-11).dp,
+                offsetY = 0.dp,
+                blurRadius = 44.dp,
+                color = ClockOuterCircleBoxShadow3
+            )
+            .shadowCircular(
+                offsetX = (10).dp,
+                offsetY = 0.dp,
+                blurRadius = 44.dp,
+                color = ClockOuterCircleBoxShadow4
+            )
             .clip(CircleShape)
             .background(ClockOuterCircleBoxColor),
         contentAlignment = Alignment.Center
