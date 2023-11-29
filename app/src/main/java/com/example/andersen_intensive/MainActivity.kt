@@ -24,6 +24,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.andersen_intensive.ui.components.ArrowDropDownUp
 import com.example.andersen_intensive.ui.components.Flags
+import com.example.andersen_intensive.ui.components.LoadImageWithLibrary
 import com.example.andersen_intensive.ui.theme.AndersenintensiveTheme
 
 class MainActivity : ComponentActivity() {
@@ -47,7 +48,11 @@ fun Homework1() {
     val isClickedFlags = remember {
         mutableStateOf(false)
     }
-    Column() {
+    val isClickedLoadImageWithLibrary = remember {
+        mutableStateOf(false)
+    }
+
+    Column {
         Row(
             modifier = Modifier
                 .fillMaxWidth()
@@ -64,6 +69,23 @@ fun Homework1() {
         }
         if (isClickedFlags.value) {
             Flags()
+        }
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(16.dp)
+                .border(
+                    1.dp, Color.Black,
+                    RectangleShape
+                ),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Text("Load image with library", modifier = Modifier.padding(16.dp))
+            Spacer(modifier = Modifier.weight(1f))
+            ArrowDropDownUp(isClicked = isClickedLoadImageWithLibrary)
+        }
+        if (isClickedLoadImageWithLibrary.value) {
+            LoadImageWithLibrary()
         }
     }
 }
