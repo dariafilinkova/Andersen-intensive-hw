@@ -30,6 +30,7 @@ import com.example.andersen_intensive.ui.components.ArrowDropDownUp
 import com.example.andersen_intensive.ui.components.Clock
 import com.example.andersen_intensive.ui.components.Flags
 import com.example.andersen_intensive.ui.components.LoadImageWithLibrary
+import com.example.andersen_intensive.ui.components.LoadImageWithoutLibrary
 import com.example.andersen_intensive.ui.theme.AndersenintensiveTheme
 
 class MainActivity : ComponentActivity() {
@@ -59,6 +60,9 @@ fun Homework1() {
     val isClickedClock = remember {
         mutableStateOf(false)
     }
+    val isClickedLoadImageWithoutLibrary = remember {
+        mutableStateOf(false)
+    }
 
     Column(modifier = Modifier.padding(4.dp)) {
         DropDownSection(
@@ -76,6 +80,11 @@ fun Homework1() {
                 isClickedSection = isClickedClock,
                 name = stringResource(id = R.string.clock),
                 function = { Clock() }
+            )
+            DropDownSection(
+                isClickedSection = isClickedLoadImageWithoutLibrary,
+                name = stringResource(id = R.string.load_image_without_library),
+                function = { LoadImageWithoutLibrary() }
             )
         }
     }
