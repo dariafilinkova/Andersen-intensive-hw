@@ -1,4 +1,4 @@
-package com.example.andersen_intensive.ui.components
+package com.example.andersen_intensive.ui.components.homework_1
 
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
@@ -26,6 +26,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.drawscope.rotate
 import androidx.compose.ui.unit.dp
+import com.example.andersen_intensive.ui.components.shadowCircular
 import com.example.andersen_intensive.ui.theme.ClockHourHandColor
 import com.example.andersen_intensive.ui.theme.ClockInnerCircleBoxShadow
 import com.example.andersen_intensive.ui.theme.ClockMinuteHandColor

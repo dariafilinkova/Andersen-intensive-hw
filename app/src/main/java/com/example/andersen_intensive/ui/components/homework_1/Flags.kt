@@ -1,4 +1,4 @@
-package com.example.andersen_intensive.ui.components
+package com.example.andersen_intensive.ui.components.homework_1
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement

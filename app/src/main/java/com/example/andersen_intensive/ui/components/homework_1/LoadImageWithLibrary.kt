@@ -1,4 +1,4 @@
-package com.example.andersen_intensive.ui.components
+package com.example.andersen_intensive.ui.components.homework_1
 
 import android.widget.Toast
 import androidx.compose.foundation.BorderStroke
@@ -26,6 +26,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
+import com.example.andersen_intensive.ui.components.shimmerBrush
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

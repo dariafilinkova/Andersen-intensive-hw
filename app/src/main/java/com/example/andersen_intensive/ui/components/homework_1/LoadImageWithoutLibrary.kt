@@ -1,4 +1,4 @@
-package com.example.andersen_intensive.ui.components
+package com.example.andersen_intensive.ui.components.homework_1
 
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
